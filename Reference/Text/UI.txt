@@ -14,9 +14,9 @@
 
 - 회원가입이 완료되면 로그인 할 수 있다.
 
-- 로그인시 이메일, 패스워드를 입력한다.
-
 - 패스워드입력시 패스워드가 일치하는지 확인한다.
+
+- 로그인시 이메일, 패스워드를 입력한다.
 
 - 이메일과 패스워드가 일치하지 않으면 로그인을 진행할 수 없다.
 
@@ -65,14 +65,53 @@
 
 - 왼쪽 메뉴를 클릭 시 해당하는 페이지로 이동을 한다.(는 딱히 데이터베이스 필요 x)
 
-* 회원
+* User (email[PK], password, nickname, style, profile, height, weight, gender)
+     이메일, 비밀번호, 닉네임, 스타일, 프로필, 키, 체중, 성별
 
-* 게시물
+CREATE TABLE user (
+     email VARCHAR(45) PRIMARY KEY,
+     password VARCHAR(255) NOT NULL,
+     nickname VARCHAR(45) NOT NULL UNIQUE,
+     profile TEXT,
+     height INT,
+     weight INT
+     style TEXT,
+     gender TEXT,
+);
 
-* 댓글
+* Board (board_number[PK], board_content, board_img_url_1 ~ 3, board_writer_time, writer_email
+          writer_nickname, writer_profile_url, comment_count, like_count, view_count)
+          보드 넘버, 내용, 이미지, 작성시간, 이메일, 닉네임, 프로필사진, 댓글, 좋아요, 조회수
 
-* 좋아요
+CREATE TABLE board (
+     board_number INT PRIMARY KEY AUTO_INCREMENT,
+     board_content TEXT NOT NULL,
+     board_look_img_url TEXT NOT NULL,
+     board_img_url_1 TEXT NOT NULL,
+     board_img_url_2 TEXT NOT NULL,
+     board_img_url_3 TEXT NOT NULL,
+     board_writer_time DATE NOT NULL,
+     writer_email 
+     writer_nickname 
+     writer_profile_url
+     comment_count
+     like_count
+     view_count,
+
+          CONSTRAINT Board_FK FOREIGN KEY (writer_email)
+    REFERENCES User (email)
+);
+
+
+* Comment (comment_numberp[PK], [FK-board(board_number)], [FK-user(user_email)], writer_nickname, writer_profile_url, writer_date, comment_content)
+
+* liky ([FK-board(board_number)],[FK(User)user_email], user_nickname, user_profile_url)
 
 * 인기,연관 검색어 (묶을 수 있는지?)
+* Searchwordlog (sequence, search_word, user_style)
+
+* Bookmark ([FK-board(board_number)], [FK(User)user_email])
+
+* Product ([FK-board(board_number)], product_number, product_mane, product_url, product_price, product_img)
 
 여기서 더 필요한 키값이 뭐가 있을지 논의 ㄱㄱ

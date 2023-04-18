@@ -27,7 +27,7 @@
 8. 각자 맡게된 파트
      - login (문일님)
      - main (태영님)
-     - myPage (호준님)
+     - myPage (호진님)
      - board, changeBoard (나)
 
 9. 해야할거 데이터베이스 키값인데 아직도 이해도가 낮음 강사 선생님께 물어보기 git Organizations 이용할지.. 
