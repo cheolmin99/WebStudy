@@ -1,0 +1,61 @@
+-----------------------------------------------------------------------------------------------------------------------
+호진님 5
+board-controller
+delete 	/api/board/{boardNumber}	특정 게시물 삭제(파라미터)(token)	 {백 기능 완!}
+post	/api/board/comment       댓글 작성(token)			{백 기능 완!}
+post	/api/board/like	좋아요 기능(token)			{백 기능 수정중?!}
+
+file-controller
+get	/file{fileName}	파일 다운로드	{백 기능 완!}
+post	/file/upload	파일 업로드    {백 기능 완!}
+
+-----------------------------------------------------------------------------------------------------------------------
+태영님 5
+board-controller
+get	/api/board/liket/{boardNumber} 좋아요한 게시물 가져오기(파라미터)(token) {백 기능 완!}
+get  /api/board/product/  게시물 상품 등록   {백 기능 완!}
+post	/api/board	게시물 작성(token)		{백 기능 완!}
+patch	/api/board	특정 게시물 수정(token)	{백 기능 완!}
+
+auth-controller
+post	/auth/sign-in 	로그인		{백 기능 완!}
+post	/auth/sign-up	회원가입		{백 기능 완!}
+
+-----------------------------------------------------------------------------------------------------------------------
+문일님 5
+board-controller
+get	/api/board/{boardNumber}	특정 게시물 가져오기(파라미터)	{백 기능 완!}
+get	/api/board/top15-sarch-word    인기 검색 리스트 가져오기	
+get	/api/board/top3-list	좋아요가 많은 게시물 3개 가져오기	
+
+main-controller
+get	/api		//공통 작성 완료
+post	/api/send-mail	//이거 안 쓸듯
+
+-----------------------------------------------------------------------------------------------------------------------
+나 6
+board-controller
+get	/api/board/list	전체 게시물 가져오기              {백 기능 완!}
+get	/api/board/my-list		본인 작성 게시물 리스트 가져오기 (token)	    {백 기능 완!}
+
+user-controller
+get	/api/user		유저 정보 불러오기	               {백 기능 완!}
+patch	/api/user/profile 	유저 프로필 url수정
+
+post	/api/vaildate/eamil	이메일 중복체크	(문일님 파트) {백 기능 완!}
+post	/api/vaildate/nickname 닉네임 중복체크	(문일님 파트) {백 기능 완!}          
+
+
+전체 작성 완료. 폴더 기초 복습 후 본 프로젝트 진입 뒤 
+post get patch delete 를 Postman을 이용해 request, response 요청을 예시에 작성
+기본적인 구현이 완료 되면 명세서 합치기.
+
+board-controller 빼고 나머지 2개 백 작성 2023-04-24 완.
+
+깃 organizations 팀원 구성 완료. 다같이 한 자리에 모일 시 각 브런치 생성, 파일 수정, 메인과의 병합, 각 브런치에 메인 풀 받기, 같은파일 수정후 병합오류 해결해보기
+
+프론트 메인 레이아웃 구성 수정중 23.04.28
+
+
+
+
