@@ -13,3 +13,41 @@
 팀플 시작할때 // 회의 날짜를 정해서 4명에서 회의시간 맞추기, UI.txt랑 비슷한 내용을 다시 모여서 짭시다. (이젠 마지막 최종 기획안을 짜야함.)
 UI.txt 작성 후 위의 문의사항(1 ~ 4) 선생님께 이미지 파일 보여주고 설명하며 어떠한 키값이 들어올지 관계도 이해하고
 테이블 작성 후 명세서 수정, 테이블 작성까지 완료.
+
+
+React (설치, 인스톨, json 수정)
+--------------------------------------------------------------------------------------------------------------------------------
+리엑트 설치법 남깁니더 복붙 해가세용
+
+본인 컴터에 node.js 설치가 되어있는지 확인
+
+vsc에서 터미널 열기 (단축키 : ctrl + Lshift + `)
+
+node -v 입력 후 버전 확인(정상적 설치가 되었다면 뜰검니더)
+
+npx -v 입력 후 버전 확인
+
+리액트 앱을 이용해 저흰 typescript 이용 합니덩
+npx create-react-app (폴터이름) --template typescript
+
+예시) npx create-react-app board-example --template typescript 라고 하면 board-example 이라는 폴더 안에 만들어짐
+
+cd (폴더이름 경로)로 이동한 뒤 npm run start < 로 실행 종료는 ctrl + c
+
+저흰 mui쓸거기 때문에 인스톨 해주셔야 함다
+npm install @mui/material @emotion/react @emotion/styled         << 터미널에 복붙
+
+사용자 주소를 감지해주는 시스템임다 이것도 터미널에 복붙 인스톨 해줍시다
+npm install react-router-dom
+
+package.json에 react-router-dom 이랑 mui/muterial 있는지 확인 아마 아이콘도 인스톨 해야할..걸요?
+
+tsconfig.json 안에서
+"compilerOptions": {
+     "baseUrl": ".",   <<< 요고 추가하심 됩니다 baseUrl만 복붙에서 붙여넣기!
+     "target": "es5",
+     "lib": [
+          ....~
+     ]
+}
+--------------------------------------------------------------------------------------------------------------------------------
