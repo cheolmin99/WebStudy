@@ -25,11 +25,11 @@ post	/auth/sign-up	회원가입		{백 기능 완!}
 문일님 5
 board-controller
 get	/api/board/{boardNumber}	특정 게시물 가져오기(파라미터)	{백 기능 완!}
-get	/api/board/top15-sarch-word    인기 검색 리스트 가져오기	
-get	/api/board/top3-list	좋아요가 많은 게시물 3개 가져오기	
+get	/api/board/top15-sarch-word    인기 검색 리스트 가져오기	{백 기능 완!}
+get	/api/board/top3-list	좋아요가 많은 게시물 3개 가져오기	{백 기능 완!} 뭐 하나 수정 해야함 뭐였지..?
 
 main-controller
-get	/api		//공통 작성 완료
+get	/api		//공통 작성 완료 {백 기능 완!}
 post	/api/send-mail	//이거 안 쓸듯
 
 -----------------------------------------------------------------------------------------------------------------------
@@ -51,6 +51,8 @@ post get patch delete 를 Postman을 이용해 request, response 요청을 예�
 기본적인 구현이 완료 되면 명세서 합치기.
 
 board-controller 빼고 나머지 2개 백 작성 2023-04-24 완.
+
+파트별 다 합침. 확인 해보고 수정 들어갈 것.
 
 깃 organizations 팀원 구성 완료. 다같이 한 자리에 모일 시 각 브런치 생성, 파일 수정, 메인과의 병합, 각 브런치에 메인 풀 받기, 같은파일 수정후 병합오류 해결해보기
 
